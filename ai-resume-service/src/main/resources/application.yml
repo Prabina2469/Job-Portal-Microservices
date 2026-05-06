@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+
+spring:
+  application:
+    name: ai-resume-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/resume_db
+    username: root
+    password: JHEX@2025
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

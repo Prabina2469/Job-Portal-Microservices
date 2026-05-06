@@ -1,0 +1,56 @@
+/* Role cards */
+.hero-role-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.hero-role-card {
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-xl);
+  padding: 28px 32px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-slow);
+}
+.hero-role-card:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-4px);
+}
+
+.role-icon { font-size: 2.5rem; }
+
+.hero-role-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-role-card p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 4px;
+}
+
+.admin-login-link {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: color var(--transition);
+}
+.admin-login-link:hover { color: rgba(255,255,255,0.85); }
+
+@media (max-width: 640px) {
+  .hero-role-cards { flex-direction: column; align-items: center; }
+  .hero-role-card { width: 100%; max-width: 280px; }
+}

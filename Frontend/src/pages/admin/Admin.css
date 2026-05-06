@@ -1,0 +1,46 @@
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.admin-table thead tr {
+  background: var(--color-bg);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border-light);
+  vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+  background: var(--color-bg);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-shield {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.admin-login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}

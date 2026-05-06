@@ -1,0 +1,18 @@
+# Node
+node_modules/
+dist/
+
+# React env
+.env
+
+# IntelliJ
+.idea/
+*.iml
+
+# Java
+target/
+*.class
+*.jar
+
+# Logs
+*.log

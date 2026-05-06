@@ -1,0 +1,43 @@
+/* Inherits Candidate.css layout, adds recruiter-specific overrides */
+.recruiter-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.recruiter-form-full { grid-column: 1 / -1; }
+
+.manage-jobs-list { display: flex; flex-direction: column; gap: 14px; }
+
+.manage-job-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-border);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all var(--transition-slow);
+}
+.manage-job-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: #c7d8ff;
+}
+
+.manage-job-info { flex: 1; }
+.manage-job-title { font-size: 1rem; font-weight: 700; font-family: var(--font-heading); margin-bottom: 4px; }
+.manage-job-meta { font-size: 0.8rem; color: var(--color-text-secondary); display: flex; gap: 12px; flex-wrap: wrap; }
+
+.manage-job-actions { display: flex; gap: 8px; align-items: center; }
+
+/* Schedule interview */
+.interview-schedule-form {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-border);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

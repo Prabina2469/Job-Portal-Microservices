@@ -1,0 +1,70 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Api-Gateway
+
+  cloud:
+    gateway:
+
+      # 🔥 IMPORTANT (fix duplicate headers issue)
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
+
+      routes:
+        - id: auth-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/auth/**
+
+        - id: admin-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/admin/**
+
+        - id: job-service
+          uri: lb://JOB-SERVICE
+          predicates:
+            - Path=/jobs/**
+
+        - id: application-service
+          uri: lb://APPLICATION-SERVICE
+          predicates:
+            - Path=/applications/**
+
+        - id: interview-service
+          uri: lb://INTERVIEW-SERVICE
+          predicates:
+            - Path=/interviews/**
+
+        - id: ai-resume-service
+          uri: lb://AI-RESUME-SERVICE
+          predicates:
+            - Path=/resume/**
+
+        - id: notification-service
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/notifications/**
+
+      # ✅ FIXED CORS (IMPORTANT)
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

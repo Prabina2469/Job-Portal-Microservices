@@ -1,0 +1,4 @@
+.layout { min-height: 100vh; display: flex; flex-direction: column; }
+.layout-body { flex: 1; display: flex; }
+.layout-body.with-sidebar { align-items: flex-start; }
+.layout-main { flex: 1; min-width: 0; }
