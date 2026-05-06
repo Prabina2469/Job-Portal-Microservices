@@ -1,4 +1,4 @@
-# 🚀 Job Portal Microservices Platform
+#  Job Portal Microservices Platform
 
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Microservices-brightgreen)
@@ -12,7 +12,7 @@ A full-stack enterprise-style Job Portal application built using a modern micros
 
 ---
 
-## 🌟 Project Highlights
+##  Project Highlights
 
 ✅ Microservices Architecture
 ✅ JWT Authentication & Authorization
@@ -33,7 +33,7 @@ A full-stack microservices-based Job Portal platform built using Spring Boot, Re
 
 ---
 
-# 🚀 Project Overview
+#  Project Overview
 
 This project is an enterprise-style Job Portal application developed using a microservices architecture. The platform supports authentication, job posting, applications, interview scheduling, notifications, and secure API communication.
 
@@ -41,7 +41,7 @@ The system is designed with scalability, modularity, and maintainability in mind
 
 ---
 
-# 🏗️ Architecture
+#  Architecture
 
 ## Backend Microservices
 
@@ -93,7 +93,7 @@ The system is designed with scalability, modularity, and maintainability in mind
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```text
 Job-Portal/
@@ -112,7 +112,7 @@ Job-Portal/
 
 ---
 
-# 🔐 Features
+#  Features
 
 ## Authentication
 
@@ -141,7 +141,7 @@ Job-Portal/
 
 ---
 
-# 🧠 Microservices Communication
+#  Microservices Communication
 
 The application follows a distributed microservices architecture.
 
@@ -152,7 +152,7 @@ The application follows a distributed microservices architecture.
 
 ---
 
-# 🐳 Docker Setup
+#  Docker Setup
 
 ## Start Kafka & Zookeeper
 
@@ -168,7 +168,7 @@ docker compose down
 
 ---
 
-# 💻 Frontend Setup (React)
+#  Frontend Setup (React)
 
 ## Navigate to frontend
 
@@ -200,7 +200,7 @@ mvn spring-boot:run
 
 ---
 
-# 🗄️ MySQL Database Setup
+#  MySQL Database Setup
 
 Create database:
 
@@ -218,7 +218,7 @@ spring.datasource.password=yourpassword
 
 ---
 
-# 🌐 Environment Variables
+#  Environment Variables
 
 ## Frontend (.env)
 
@@ -234,7 +234,7 @@ server.port=${PORT:8080}
 
 ---
 
-# 🔄 API Flow
+#  API Flow
 
 1. User accesses React frontend
 2. Frontend sends requests to backend APIs
@@ -245,7 +245,7 @@ server.port=${PORT:8080}
 
 ---
 
-# 📦 GitHub Push Setup
+#  GitHub Push Setup
 
 ## Step 1 — Initialize Git
 
@@ -295,7 +295,7 @@ git push -u origin main
 
 ---
 
-# 📸 Suggested Screenshots for GitHub
+#  Suggested Screenshots for GitHub
 
 You can improve your GitHub repository by adding:
 
@@ -309,7 +309,7 @@ You can improve your GitHub repository by adding:
 
 ---
 
-# 🎯 Future Enhancements
+#  Future Enhancements
 
 * Resume Parsing AI
 * Email Notifications
@@ -321,7 +321,7 @@ You can improve your GitHub repository by adding:
 
 ---
 
-# 🧪 Testing
+#  Testing
 
 The application can be tested using:
 
@@ -331,7 +331,7 @@ The application can be tested using:
 
 ---
 
-# 📚 Learning Outcomes
+# Learning Outcomes
 
 This project demonstrates practical experience with:
 
@@ -347,13 +347,13 @@ This project demonstrates practical experience with:
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 Developed as a full-stack enterprise microservices learning project.
 
 ---
 
-# ⭐ Interview Highlights
+#  Interview Highlights
 
 This project showcases:
 
@@ -366,6 +366,6 @@ This project showcases:
 
 ---
 
-# 📄 License
+#  License
 
 This project is for educational and portfolio purposes.
