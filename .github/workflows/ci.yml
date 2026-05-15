@@ -27,15 +27,78 @@ jobs:
           cd authservice
           mvn clean install -DskipTests
 
+      - name: Build Auth Docker Image
+        run: |
+          docker build -t authservice ./authservice
+
+
+
       - name: Build Job Service
         run: |
           cd job-service
           mvn clean install -DskipTests
 
+      - name: Build Job Docker Image
+        run: |
+          docker build -t job-service ./job-service
+
+
+          
       - name: Build Application Service
         run: |
           cd application-service
           mvn clean install -DskipTests
+
+      - name: Build Application Docker Image
+        run: |
+          docker build -t application-service ./application-service
+
+
+      - name: Build Interview Service
+        run: |
+          cd interview-service
+          mvn clean install -DskipTests
+
+      - name: Build Interview Docker Image
+        run: |
+          docker build -t interview-service ./interview-service
+
+      - name: Build Notification Service
+        run: |
+          cd notification_Service
+          mvn clean install -DskipTests
+
+      - name: Build Notification Docker Image
+        run: |
+          docker build -t notification-service ./notification_Service
+
+      - name: Build AI Resume Service
+        run: |
+          cd ai-resume-service
+          mvn clean install -DskipTests   
+      
+      - name: Build AI Resume Docker Image
+        run: |
+          docker build -t ai-resume-service ./ai-resume-service
+
+      - name: Build API Gateway
+        run: |
+          cd Api-Gateway
+          mvn clean install -DskipTests
+
+      - name: Build API Gateway Docker Image
+        run: |
+          docker build -t api-gateway ./Api-Gateway 
+      
+
+      - name: Build Service Discovery
+        run: |
+          cd Service-Discovery
+          mvn clean install -DskipTests
+          
+      - name: Build Service Discovery Docker Image
+        run: |
+          docker build -t service-discovery ./Service-Discovery
 
   frontend-build:
 
@@ -60,3 +123,7 @@ jobs:
         run: |
           cd Frontend
           npm run build
+
+      - name: Build Frontend Docker Image
+        run: |
+          docker build -t frontend ./Frontend
