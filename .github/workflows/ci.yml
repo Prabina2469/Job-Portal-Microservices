@@ -1,0 +1,62 @@
+name: Job Portal CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  backend-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Build Auth Service
+        run: |
+          cd authservice
+          mvn clean install
+
+      - name: Build Job Service
+        run: |
+          cd job-service
+          mvn clean install
+
+      - name: Build Application Service
+        run: |
+          cd application-service
+          mvn clean install
+
+  frontend-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Frontend Dependencies
+        run: |
+          cd Frontend
+          npm install
+
+      - name: Build Frontend
+        run: |
+          cd Frontend
+          npm run build
