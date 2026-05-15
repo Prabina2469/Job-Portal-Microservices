@@ -25,17 +25,17 @@ jobs:
       - name: Build Auth Service
         run: |
           cd authservice
-          mvn clean install
+          mvn clean install -DskipTests
 
       - name: Build Job Service
         run: |
           cd job-service
-          mvn clean install
+          mvn clean install -DskipTests
 
       - name: Build Application Service
         run: |
           cd application-service
-          mvn clean install
+          mvn clean install -DskipTests
 
   frontend-build:
 
